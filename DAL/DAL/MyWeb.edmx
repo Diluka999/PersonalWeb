@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MyWebModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="MyWebModelStoreContainer">
+          <EntitySet Name="tblMessages" EntityType="MyWebModel.Store.tblMessages" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="tblMessages">
+          <Key>
+            <PropertyRef Name="MId" />
+          </Key>
+          <Property Name="MId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Fname" Type="nvarchar" MaxLength="100" />
+          <Property Name="Lname" Type="nvarchar" MaxLength="100" />
+          <Property Name="EmailAddress" Type="nvarchar" MaxLength="100" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="50" />
+          <Property Name="Message" Type="nvarchar(max)" />
+          <Property Name="DateTime" Type="datetime" />
+          <Property Name="IpAddress" Type="nvarchar" MaxLength="60" />
+          <Property Name="LoggingDevice" Type="nvarchar" MaxLength="50" />
+          <Property Name="LoggingBrowser" Type="nvarchar" MaxLength="50" />
+          <Property Name="LoggingLocation" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MyWebModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="MyWebEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="tblMessages" EntityType="MyWebModel.tblMessage" />
+        </EntityContainer>
+        <EntityType Name="tblMessage">
+          <Key>
+            <PropertyRef Name="MId" />
+          </Key>
+          <Property Name="MId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Fname" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Lname" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="EmailAddress" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Subject" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Message" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <Property Name="IpAddress" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="LoggingDevice" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LoggingBrowser" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LoggingLocation" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MyWebModelStoreContainer" CdmEntityContainer="MyWebEntities">
+          <EntitySetMapping Name="tblMessages">
+            <EntityTypeMapping TypeName="MyWebModel.tblMessage">
+              <MappingFragment StoreEntitySet="tblMessages">
+                <ScalarProperty Name="MId" ColumnName="MId" />
+                <ScalarProperty Name="Fname" ColumnName="Fname" />
+                <ScalarProperty Name="Lname" ColumnName="Lname" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+                <ScalarProperty Name="LoggingDevice" ColumnName="LoggingDevice" />
+                <ScalarProperty Name="LoggingBrowser" ColumnName="LoggingBrowser" />
+                <ScalarProperty Name="LoggingLocation" ColumnName="LoggingLocation" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

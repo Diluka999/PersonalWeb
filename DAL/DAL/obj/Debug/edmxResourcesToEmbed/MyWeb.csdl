@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyWebModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="MyWebEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="tblMessages" EntityType="MyWebModel.tblMessage" />
+  </EntityContainer>
+  <EntityType Name="tblMessage">
+    <Key>
+      <PropertyRef Name="MId" />
+    </Key>
+    <Property Name="MId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Fname" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Lname" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Subject" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Message" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="DateTime" Type="DateTime" Precision="3" />
+    <Property Name="IpAddress" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="LoggingDevice" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LoggingBrowser" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LoggingLocation" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+</Schema>

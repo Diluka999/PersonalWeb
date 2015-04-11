@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MyWebModelStoreContainer" CdmEntityContainer="MyWebEntities">
+    <EntitySetMapping Name="tblMessages">
+      <EntityTypeMapping TypeName="MyWebModel.tblMessage">
+        <MappingFragment StoreEntitySet="tblMessages">
+          <ScalarProperty Name="MId" ColumnName="MId" />
+          <ScalarProperty Name="Fname" ColumnName="Fname" />
+          <ScalarProperty Name="Lname" ColumnName="Lname" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+          <ScalarProperty Name="LoggingDevice" ColumnName="LoggingDevice" />
+          <ScalarProperty Name="LoggingBrowser" ColumnName="LoggingBrowser" />
+          <ScalarProperty Name="LoggingLocation" ColumnName="LoggingLocation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
